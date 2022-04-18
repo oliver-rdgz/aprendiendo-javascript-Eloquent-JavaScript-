@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números</title>
+</head>
+<body>
+    <h1>Números</h1>
+    <p> Los valores de tipo número son el 13, 15 o 10, como se puede ver el valor es un número, para guardar un solo número javascript utiliza 64 bits, eso quiere decir que para un solo número hay 64 espacios vacios los caules pueden contener una serie de 1 y 0 que van a representar un número</p>
+
+    <h2>ejemplo</h2>
+
+    <table>
+        <tr>
+            <td>Espacios en memoria</td>
+            <td>Uno</td>
+            <td>Dos</td>
+            <td>Tres</td>
+            <td>Cuatro</td>
+            <td>Cinco</td>
+            <td>Seis</td>
+            <td>Siete</td>
+            <td>Ocho</td>
+            <td>Nueve</td>
+            <td>Diez</td>
+        </tr>
+        <tr>
+            <td>bits</td>
+            <td>1</td>
+            <td>2</td>
+            <td>4</td>
+            <td>8</td>
+            <td>16</td>
+            <td>32</td>
+            <td>64</td>
+            <td>128</td>
+            <td>256</td>
+            <td>512</td>
+        </tr>
+    </table>
+
+    <h3>si se quiere representar el número 75 en bits usando la anterior tabla</h3>
+
+    <table>
+        <tr>
+            <td>Espacios en memoria</td>
+            <td>Uno</td>
+            <td>Dos</td>
+            <td>Tres</td>
+            <td>Cuatro</td>
+            <td>Cinco</td>
+            <td>Seis</td>
+            <td>Siete</td>
+            <td>Ocho</td>
+            <td>Nueve</td>
+            <td>Diez</td>
+        </tr>
+        <tr>
+            <td>bits</td>
+            <td>1</td>
+            <td>2</td>
+            <td>4</td>
+            <td>8</td>
+            <td>16</td>
+            <td>32</td>
+            <td>64</td>
+            <td>128</td>
+            <td>256</td>
+            <td>512</td>
+        </tr>
+        <tr>
+            <td>75 en bits</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+    <p>Podemos ver que cada espacio representa un número entero que cada vez se va hacen mas grande y que cada número se multiplica por 2 lo cual genera el número siguiente (1x2 =2, 2x2=4, 4x2=8, 8x2=16), entonces si se suman los bits que tienen el número 1 los cuales representan el número 75, pasa lo siguiente:</p>
+
+    <p>1 + 2 + 8 + 64 = 75</p>
+
+    <p>Entonces podemos concluir que sí utilizamos la tabla anterior para representar valores numéricos solo podemos hacer 2^10 (2 elevado a 10) combinaciones, lo cual 1024 sería el número mayor que podemos representar como un solo valor numérico y -1023 el número menor que podemos representar como un solo valor numérico.</p>
+
+    <p>Una computadora puede representar 2^64 (2 elevado a 64) combinaciones, lo que nos dejaria un número enorme que podemos representar como un solo valor numérico</p>
+</body>
+</html>
