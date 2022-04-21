@@ -1,0 +1,3 @@
+Libro: EloquentJavaScript 
+Entrega: 3ra edición 
+Autor: Marijn Haverbeke
