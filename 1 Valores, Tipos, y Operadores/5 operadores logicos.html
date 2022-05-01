@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores logicos</title>
+</head>
+<body>
+    <script>
+        
+        alert("los operadores logicos permiten hacer operaciones más complejas con los valores booleanos");
+
+        // AND
+        alert("El operador logico && establece que si todos los valores no son verdaderos en entonces significa que la operación es falsa, && es el operador logico AND (y) \n " + ` Ejemplo: \n 1) false && false = ${false && false} \n 2)  false && true = ${false && true} \n 3)  true && true = ${true && true}`);
+        alert("entonces el operador logico && solo es verdadero cuando todos los valores son verdaderos");
+
+        // OR
+        alert("El operador logico || estable que si por lo menos un solo valor es verdadero entonces significa que la operación es verdadera, || es el operador logico OR \n " + `Ejemplo: \n 1) false || false = ${false || false} \n 2)  false || true = ${false || true} \n 3)  true || true = ${true || true}`);
+
+        // NOT
+        alert(`El operador logico ! lo que hace es negar el valor booleano, haciendo que el valor cambie a su valor opuesto,\n Ejemplo: \n 1) !true = ${!true} \n 2) !false = ${!false}`)
+
+        // Operadores logicos con operaciones aritmeticas
+
+        alert(`|| tiene la menor precedencia (precedencia es el que determina quien es mas o menos importante en una operación, la operación con mayor precedencia se va a realizar primero ), luego le sigue &&, luego le siguen los operadores de comparación (>, ==, y demás)`)
+        alert(`Operación: \n 1 + 1 == 2 && 10 * 10 > 50 \n Resultado: \n ${1 + 1 == 2 && 10 * 10 > 50}`)
+
+        // Operador ternario 
+
+        alert(`1) true ? 1 : 2 ${true ? 1 : 2 } \n 2) false ? 1 : 2  = ${false ? 1 : 2 }\n el operador ternario como indica su nombre nos dice que debe tener tres valores para poder realizarse y lo podemos utilizar con el signo ?. \n El primer valor es un booleano, el segundo valor es un resultado que arroja javascript si el primer que es un booleano es verdadero, y el tercer valor es un resultado que arroja javascript si el primer que es un booleano es falso`)
+
+
+    </script>
+</body>
+</html>
