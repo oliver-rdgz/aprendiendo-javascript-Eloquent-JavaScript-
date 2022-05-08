@@ -24,3 +24,13 @@ if (!Number.isNaN(elNumero)) {
 } else { 
     console.log("Ey. Por qué no me diste un número?"); 
 };
+
+//Los if/else se pueden encadenar de las siguiente manera:
+elNumero = Number(prompt("Elige un numero")); 
+if (elNumero < 10) { 
+    console.log("Pequeño"); 
+} else if (elNumero < 100) { 
+    console.log("Mediano"); 
+} else { 
+    console.log("Grande"); 
+}
