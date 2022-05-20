@@ -23,3 +23,14 @@ const segundaFuncion = () => {
 segundaFuncion();
 
 
+console.log(terceraFuncion())
+
+function terceraFuncion(){
+    return "Hola otra vez, esta es la tercera vez"
+}
+
+/*
+Este código funciona, aunque la función esté definida debajo del código que lo usa. Las declaraciones de funciones no son parte del flujo de control regular de arriba hacia abajo. Estas son conceptualmente trasladadas a la cima de su alcance y pueden ser utilizadas por todo el código en ese alcance. Esto es a veces útil porque nos da la libertad de ordenar el código en una forma que nos parezca significativa, sin preocuparnos por tener que definir todas las funciones antes de que sean utilizadas.
+*/
+
+
