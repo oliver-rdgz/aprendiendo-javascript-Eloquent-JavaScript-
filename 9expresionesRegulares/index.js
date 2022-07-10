@@ -234,3 +234,65 @@ console.log(obtenerFecha("30-1-2003"));
    // → ["an", "an"]
    console.log("Banana: ","Banana".match(/an/)); 
    // → ["an"]
+
+   //Ciclos sobre coincidencias
+
+   let entrada = "Un string con 3 numeros en el... 42 y 88."; 
+   let numero = /\b\d+\b/g; 
+   coincidencia; 
+   while (coincidencia = numero.exec(entrada)) { 
+      console.log("Valor de coincidencia: ", coincidencia); 
+      console.log("Se encontro", coincidencia[0], "en", coincidencia. index); 
+   }
+
+   const archivoINI = "motordebusqueda=https://duckduckgo.com/?q=$1 malevolencia=9.7 ; los comentarios estan precedidos por un punto y coma... ; cada seccion contiene un enemigo individual [larry] nombrecompleto=Larry Doe tipo=bravucon del preescolar sitioweb=http://www.geocities.com/CapeCanaveral/11451 [davaeorn] nombrecompleto=Davaeorn tipo=hechizero malvado directoriosalida=/home/marijn/enemies/davaeorn"
+
+   function quitarComentarios(string = ""){
+      const regex = /;[^\[]*/g;
+      return string.replace(regex, "");
+   }
+
+   function quitarSecciones(string= ""){
+      const regex = /\[[\w\W]*\]/g;
+      return string.replace(regex, "");
+   }
+
+   console.log(quitarComentarios(archivoINI));
+   console.log(quitarSecciones(quitarComentarios(archivoINI)));
+
+   function analizarINI(string) { 
+      // Comenzar con un objeto para mantener los campos de nivel superior 
+      let resultado = {}; 
+      let seccion = resultado; 
+      string.split(/\r?\n/).forEach(linea => { 
+         let coincidencia; 
+         if (coincidencia = linea.match(/^(\w+)=(.*)$/)) { 
+            seccion[coincidencia[1]] = coincidencia[2]; 
+         } else if (coincidencia = linea.match(/^\[(.*)\]$/)) { 
+            seccion = resultado[coincidencia[1]] = {}; 
+         } else if (!/^\s*(;.*)?$/.test(linea)) { 
+            throw new Error("Linea '" + linea + "' no es valida."); 
+         } 
+      }); 
+      return resultado; 
+   } 
+
+   console.log(analizarINI(`nombre=Vasilis\n[direccion]\nciudad=Tessaloniki`));
+
+   //Caracteres internacionales
+
+   console.log(/🍎{3}/.test("🍎🍎🍎")); // → false
+
+   console.log(/<.>/.test("<🌹>")); // → false 
+   console.log(/<.>/u.test("<🌹>")); // → true
+
+   //Debe agregar una opción u (para Unicode) a tu expresión regular para hacerla tratar a tales caracteres apropiadamente.
+
+   /*
+   es posible usar \p en una expresión regular (que debe tener habilitada la opción Unicode) para que coincida con todos los caracteres a los que el estándar Unicode les asigna una propiedad determinada.
+   */
+
+   console.log(/\p{Script=Greek}/u.test("α")); // → true 
+   console.log(/\p{Script=Arabic}/u.test("α")); // → false 
+   console.log(/\p{Alphabetic}/u.test("α")); // → true 
+   console.log(/\p{Alphabetic}/u.test("!")); // → false

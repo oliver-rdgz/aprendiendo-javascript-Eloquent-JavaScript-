@@ -1,0 +1,20 @@
+Es casi inevitable que, durante el curso de trabajar en estos ejercicios, te sentiras confundido y frustrado por el comportamiento inexplicable de alguna regular expresión. A veces ayuda ingresar tu expresión en una herramienta en línea como debuggex.com para ver si su visualización corresponde a lo que pretendías y a experimentar con la forma en que responde a varios strings de entrada.
+
+
+Golf Regexp 
+Golf de Codigo es un término usado para el juego de intentar expresar un programa particular con el menor número de caracteres posible. Similarmente, Golf de Regexp es la práctica de escribir una expresión regular tan pequeña como sea posible para que coincida con un patrón dado, y sólo con ese patrón. Para cada uno de los siguientes elementos, escribe una expresión regular para probar si alguna de las substrings dadas ocurre en un string. La expresión regular debe coincidir solo con strings que contengan una de las substrings descritas. No te preocupes por los límites de palabras a menos que sean explícitamente mencionados. Cuando tu expresión funcione, ve si puedes hacerla más pequeña.
+1. car y cat 
+2. pop y prop 
+3. ferret, ferry, y ferrari 
+4. Cualquier palabra que termine ious 
+5. Un carácter de espacio en blanco seguido de un punto, coma, dos puntos o punto y coma 
+6. Una palabra con mas de seis letras 
+7. Una palabra sin la letra e (o E)
+
+
+Estilo entre comillas 
+Imagina que has escrito una historia y has utilizado comillass simples en todas partes para marcar piezas de diálogo. Ahora quieres reemplazar todas las comillas de diálogo con comillas dobles, pero manteniendo las comillas simples usadas en contracciones como aren’t. Piensa en un patrón que distinga de estos dos tipos de uso de citas y crea una llamada al método replace que haga el reemplazo apropiado.
+
+
+Números otra vez 
+Escribe una expresión que coincida solo con el estilo de números en JavaScript. Esta debe admitir un signo opcional menos o más delante del número, el punto decimal, y la notación de exponente—5e-3 o 1E10— nuevamente con un signo opcional en frente del exponente. También ten en cuenta que no es necesario que hayan dígitos delante o detrás del punto, pero el el número no puede ser solo un punto. Es decir, .5 y 5. son numeros válidos de JavaScript, pero solo un punto no lo es.
