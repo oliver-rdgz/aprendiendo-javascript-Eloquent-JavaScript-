@@ -1,0 +1,25 @@
+Un robot modular 
+Estas son las vinculaciones que el proyecto del Capítulo 7 crea:
+caminos 
+construirGrafo 
+grafoCamino 
+EstadoPueblo 
+correrRobot 
+eleccionAleatoria 
+robotAleatorio 
+rutaCorreo 
+robotRuta 
+encontrarRuta 
+robotOrientadoAMetas
+
+Si tuvieras que escribir ese proyecto como un programa modular, qué módulos crearías? Qué módulo dependería de qué otro módulo, y cómo se verían sus interfaces? 
+Qué piezas es probable que estén disponibles pre-escritas en NPM? Preferirias usar un paquete de NPM o escribirlas tu mismo?
+
+
+Módulode Caminos 
+Escribe un módulo CommonJS, basado en el ejemplo del Capítulo 7, que contenga el array de caminos y exporte la estructura de datos grafo que los representa como grafoCamino. Debería depender de un modulo ./grafo, que exporta una función construirGrafo que se usa para construir el grafo. Esta función espera un array de arrays de dos elementos (los puntos de inicio y final de los caminos).
+
+Dependencias circulares 
+Una dependencia circular es una situación en donde el módulo A depende de B, y B también, directa o indirectamente, depende de A. Muchos sistemas de módulos simplemente prohíbne esto porque cualquiera que sea el orden que elijas para cargar tales módulos, no puedes asegurarse de que las dependencias de cada módulo han sido cargadas antes de que se ejecuten. 
+Los modulos CommonJS permiten una forma limitada de dependencias cíclicas. Siempre que los módulos no reemplacen a su objeto exports predeterminado, y no accedan a la interfaz de las demás hasta que terminen de cargar, las dependencias cíclicas están bien. 
+La función require dada anteriormente en este capítulo es compatible con este tipo de ciclo de dependencias. Puedes ver cómo maneja los ciclos? Qué iría mal cuando un módulo en un ciclo reemplace su objeto exports por defecto?
