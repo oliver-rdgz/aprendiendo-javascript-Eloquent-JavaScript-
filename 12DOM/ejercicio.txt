@@ -1,0 +1,26 @@
+Ejercicios 
+Construye una tabla 
+Una tabla HTML se construye con la siguiente estructura de etiquetas: 
+<table> 
+    <tr> 
+        <th>nombre</th> 
+        <th>altura</th> 
+        <th>ubicacion</th> 
+    </tr> 
+    <tr> 
+        <td>Kilimanjaro</td> 
+        <td>5895</td> 
+        <td>Tanzania</td> 
+    </tr> 
+</table>
+
+Para cada fila, la etiqueta <table> contiene una etiqueta <tr>. Dentro de estas etiquetas <tr>, podemos poner ciertos elementos: ya sean celdas cabecera (<th>) o celdas regulares (<td>). Dadounconjunto dedatos de montañas, un arreglo de objetos con propiedades nombre, altura y lugar, genera la estructura DOM para una tabla que enlista esos objetos. Deberá tener una columna por llave y una fila por objeto, además de una fila cabecera con elementos <th> en la parte superior, listando los nombres de las columnas. Escribe esto de manera que las columnas se deriven automáticamente de los objetos, tomando los nombres de propiedad del primer objeto en los datos. Agrega la tabla resultante al elemento con el atributo id de "montañas" de manera que se vuelva visible en el documento. Una vez que lo tengas funcionando, alinea a la derecha las celdas que contienen valores numéricos, estableciendo su propiedad style.textAlign cómo "right".
+
+
+
+Elementos por nombre de tag
+El método document.getElementsByTagName regresa todos los elementos hijo con un nombre de etiqueta dado. Implementa tu propia versión de esto como una función que toma un nodo y una cadena (el nombre de la etiqueta) como argumentos y regresa un arreglo que contiene todos los nodos elemento descendientes con el nombre del tag dado. Para encontrar el nombre del tag de un elemento, utiliza su propiedad nodeName. Pero considera que esto regresará el nombre de la etiqueta todo en mayúsculas. Utiliza las funciones de las cadenas (string), toLowerCase o toUpperCase para compensar esta situación.
+
+
+El sombrero del gato
+Extiende la animación del gato definida anteriormente de manera de que tanto el gato como su sombrero (<img src="img/hat.png">) orbiten en lados opuestos de la elipse. O haz que el sombrero circule alrededor del gato. O altera la animación en alguna otra forma interesante. Para hacer el posicionamiento de múltiples objetos más sencillo, probablemente sea buena idea intercambiar a un posicionamiento absoluto. Esto significa que top y left serán contados con relación a la parte superior izquierda del documento. Para evitar usar coordenadas negativas, que pueden causar que la imagen se mueva fuera de la página visible, puedes agregar un número fijo de pixeles a los valores de las posiciones.

@@ -33,16 +33,40 @@
 //     } 
 // }
 
-function elt(tipo, ...hijos) { 
-    let nodo = document.createElement(tipo); 
-    for (let hijo of hijos) { 
-        if (typeof hijo != "string") nodo.appendChild(hijo); 
-        else nodo.appendChild(document.createTextNode(hijo)); 
-    } 
-    return nodo; 
+// function elt(tipo, ...hijos) { 
+//     let nodo = document.createElement(tipo); 
+//     for (let hijo of hijos) { 
+//         if (typeof hijo != "string") nodo.appendChild(hijo); 
+//         else nodo.appendChild(document.createTextNode(hijo)); 
+//     } 
+//     return nodo; 
+// } 
+// document.getElementById("cita").appendChild( 
+//     elt("footer", "—", 
+//     elt("strong", "Karl Popper"), ", prefacio de la segunda edición de ", 
+//     elt("em", "La sociedad abierta y sus enemigos"), ", 1950")
+// );
+
+function tiempo(nombre, accion) { 
+    let inicio = Date.now(); 
+    // Tiempo actual en milisegundos 
+    accion(); 
+    console.log(nombre, "utilizo", Date.now()- inicio, "ms"); 
 } 
-document.getElementById("cita").appendChild( 
-    elt("footer", "—", 
-    elt("strong", "Karl Popper"), ", prefacio de la segunda edición de ", 
-    elt("em", "La sociedad abierta y sus enemigos"), ", 1950")
-);
+
+tiempo("inocente", () => { 
+    let objetivo = document.getElementById("uno"); 
+    while (objetivo.offsetWidth < 2000) { 
+        objetivo.appendChild(document.createTextNode("X")); 
+    } 
+}); 
+// → inocente utilizo 32 ms 
+
+tiempo("ingenioso", function() { 
+    let objetivo = document.getElementById("dos"); 
+    objetivo.appendChild(document.createTextNode("XXXXX")); 
+    let total = Math.ceil(2000 / (objetivo.offsetWidth / 5));
+    console.log(total);
+    objetivo.firstChild.nodeValue = "X".repeat(total); 
+}); 
+// → ingenioso utilizo 1 ms
